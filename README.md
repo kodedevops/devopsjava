@@ -85,4 +85,20 @@ docker tag devopsjava santoshmondal/devopsjava:latest
 docker push santoshmondal/devopsjava:latest
 ```
 
+# Specify the platform
+```
+docker login
+docker buildx build --platform linux/amd64,linux/arm64 devopsjava .
+docker tag devopsjava santoshmondal/devopsjava:latest
+docker push santoshmondal/devopsjava:latest
+
+docker buildx build --platform linux/amd64,linux/arm64 -t santoshmondal/devopsjava:1.0.1 --push .
+
+docker run -p 8080:8080 santoshmondal/devopsjava
+```
+
+
+
+
+
 
