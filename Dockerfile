@@ -1,14 +1,14 @@
-# Use the official OpenJDK 17 runtime as a base image
-FROM openjdk:17-jdk-slim
+# Start with a base image containing Java runtime
+FROM eclipse-temurin:17-jre-focal
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the packaged JAR file into the container
-COPY target/*.jar app.jar
+# Copy the packaged jar file into the container
+COPY target/*.jar /app/devopsjava.jar
 
-# Expose the port that your application runs on
+# Expose the port on which your Spring Boot application runs
 EXPOSE 8080
 
-# Set the entry point to run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Specify the command to run your Spring Boot application using environment variables
+CMD ["java", "-jar", "/app/devopsjava.jar"]
