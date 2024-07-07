@@ -13,6 +13,13 @@ import java.util.Map;
 @RequestMapping("/hello")
 public class HelloController {
 
+    @GetMapping("/")
+    ResponseEntity<?> hello() {
+        var message = "Hell World";
+        var map = Map.of("message",message);
+        return ResponseEntity.ok().body(map);
+    }
+
     @GetMapping("/health")
     ResponseEntity<?> health() {
        var map = Map.of("health","ok");
