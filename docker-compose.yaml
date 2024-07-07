@@ -1,0 +1,5 @@
+services:
+  spring-boot-app:
+    image: santoshmondal/devopsjava:latest
+    ports:
+      - "8080:8080"

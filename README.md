@@ -76,3 +76,13 @@ devopsjava
 -p: Maps port 8080 from the container to port 8080 on the host machine (adjust as needed).
 
 
+
+# Push to Dockerhub
+```
+docker login
+docker build -t devopsjava .
+docker tag devopsjava santoshmondal/devopsjava:latest
+docker push santoshmondal/devopsjava:latest
+```
+
+
