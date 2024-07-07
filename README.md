@@ -11,4 +11,3 @@ For further reference, please consider the following sections:
 ### Guides
 RESTFul Java Services for deployment in AWS/GCP/Azure cloud environment. 
 
-# devopsjava
