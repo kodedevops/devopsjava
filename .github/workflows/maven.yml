@@ -2,11 +2,8 @@
 name: Java Spring Boot Publish Docker Image to Dockerhub
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  workflow_dispatch:
+  
 jobs:
   build:
 
