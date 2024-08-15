@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      APP_NAME: devopsjava
+
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -37,7 +41,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_TOKEN }}/${{ github.repository }}:latest .
+      run: docker build -t ${{ secrets.DOCKERHUB_TOKEN }}/${{ env.APP_NAME }}:latest .
 
 
     
