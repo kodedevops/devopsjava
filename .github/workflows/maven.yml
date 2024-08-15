@@ -3,14 +3,13 @@ name: Java Spring Boot Publish Docker Image to Dockerhub
 
 on:
   workflow_dispatch:
+
+env:
+  APP_NAME: devopsjava
   
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:
-      APP_NAME: devopsjava
-
 
     steps:
     - name: Checkout repository
