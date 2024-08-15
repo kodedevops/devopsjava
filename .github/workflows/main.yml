@@ -1,4 +1,4 @@
-name: Java Spring Boot Publish Docker Image to Docker Hub
+name: Main with two jobs
 
 on:
   workflow_dispatch:
