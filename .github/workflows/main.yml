@@ -40,13 +40,23 @@ jobs:
       run: docker save ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:${{ env.APP_VERSION }} | gzip > image.tar.gz
       # Save Docker image to a file for sharing between jobs
 
+    - name: Upload Docker image artifact
+      uses: actions/upload-artifact@v4.3.6
+      with:
+        name: docker-image
+        path: image.tar.gz
+
   push:
     runs-on: ubuntu-latest
     needs: build
     steps:
+    - name: Download Docker image artifact
+      uses: actions/download-artifact@v4.1.8
+      with:
+        name: docker-image
+
     - name: Load Docker image
       run: gunzip -c image.tar.gz | docker load
-      # Load Docker image from the file
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v3.3.0
