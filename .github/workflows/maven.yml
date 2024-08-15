@@ -41,7 +41,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKERHUB_TOKEN }}/${{ env.APP_NAME }}:latest .
+      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.APP_NAME }}:latest .
 
 
     
