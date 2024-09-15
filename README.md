@@ -4,8 +4,21 @@
 
 Public Url to Test After deployment
 ```
+http://IP_ADDRESS:PORT/first/hello
+http://IP_ADDRESS:PORT/first/health
+http://IP_ADDRESS:PORT/first/list
+http://IP_ADDRESS:PORT/first/map          
+
 http://IP_ADDRESS:PORT/hello/
 http://IP_ADDRESS:PORT/hello/health
+```
+
+PORTS: 
+```
+JAVA   : 8080
+KOTLIN : 8080
+PYTHON : 5000
+NODE   : 3000
 ```
 
 
