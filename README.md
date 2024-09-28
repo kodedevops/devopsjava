@@ -4,10 +4,11 @@
 
 Public Url to Test After deployment
 ```
-http://IP_ADDRESS:PORT/first/hello
-http://IP_ADDRESS:PORT/first/health
-http://IP_ADDRESS:PORT/first/list
-http://IP_ADDRESS:PORT/first/map          
+http://IP_ADDRESS:PORT/java-service/first/
+http://IP_ADDRESS:PORT/java-service/first/hello
+http://IP_ADDRESS:PORT/java-service/first/health
+http://IP_ADDRESS:PORT/java-service/first/list
+http://IP_ADDRESS:PORT/java-service/first/map          
 
 http://IP_ADDRESS:PORT/hello/
 http://IP_ADDRESS:PORT/hello/health
