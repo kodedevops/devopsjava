@@ -14,6 +14,13 @@ import java.util.Map;
 @RequestMapping("/first")
 public class FirstController {
 
+    @GetMapping("/")
+    ResponseEntity<?> hellodefault() {
+        var message = "Hello Default Path";
+        var map = Map.of("message",message);
+        return ResponseEntity.ok().body(map);
+    }
+
     @GetMapping("/hello")
     ResponseEntity<?> hello() {
         var message = "Hell World";
